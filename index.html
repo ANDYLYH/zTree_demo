@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<HTML>
+
+	<HEAD>
+		<TITLE> ZTREE DEMO </TITLE>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="css/demo.css" type="text/css">
+		<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+		<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ztree.core.js"></script>
+		<SCRIPT LANGUAGE="JavaScript">
+			$(function() {
+				var zTreeObj;
+				// zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+				var setting = {
+					data: {
+						simpleData: {
+							enable: true
+						}
+					}
+				};
+				// zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+				var zNodes = [{
+					"name": "济南公司",
+					"pId": "SD",
+					"id": "SDJN",
+					"title": "山东济南公司"
+				}, {
+					"name": "企管部",
+					"pId": "SDJN",
+					"id": "SDJN01",
+					"title": "山东济南企管部"
+				}, {
+					"name": "企管部",
+					"pId": "SDQD",
+					"id": "SDQD01",
+					"title": "山东青岛企管部"
+				}, {
+					"name": "山东公司",
+					"pId": "0",
+					"id": "SD",
+					"title": "山东公司"
+				}, {
+					"name": "财务部",
+					"pId": "SDJN",
+					"id": "SDJN02",
+					"title": "山东济南财务部"
+				}, {
+					"name": "青岛公司",
+					"pId": "SD",
+					"id": "SDQD",
+					"title": "山东青岛公司"
+				}, {
+					"name": "财务部",
+					"pId": "SDQD",
+					"id": "SDQD02",
+					"title": "山东青岛财务部"
+				}, {
+					"name": "研发部",
+					"pId": "SDJN",
+					"id": "SDJN03",
+					"title": "山东济南研发部"
+				}, {
+					"name": "研发部",
+					"pId": "SDQD",
+					"id": "SDQD03",
+					"title": "山东青岛研发部"
+				}];
+				$(document).ready(function() {
+					zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+				});
+			})
+		</SCRIPT>
+	</HEAD>
+
+	<BODY>
+		<div>
+			<ul id="treeDemo" class="ztree"></ul>
+		</div>
+	</BODY>
+
+</HTML>
